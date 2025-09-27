@@ -1,0 +1,49 @@
+### Unidades de Medida para Fontes em CSS
+
+Aqui está uma explicação concisa sobre as unidades de medida mais comuns para fontes, com exemplos claros.
+
+---
+
+#### 1. `px` (Pixel)
+- **O que é:** Uma unidade de medida absoluta e de tamanho fixo. `1px` é uma unidade de tela que não muda de tamanho em relação a outros elementos.
+- **Quando usar:** Para elementos que você quer que tenham um tamanho fixo, sem escalar com as preferências do usuário ou tamanho de tela. É menos flexível para designs responsivos.
+- **Exemplo:**
+  ```css
+  p {
+    font-size: 16px; /* Tamanho fixo, não escala. */
+  }
+  ```
+
+---
+
+#### 2. `em`
+- **O que é:** Uma unidade relativa ao `font-size` do **elemento pai**.
+- **Como funciona:** Se um elemento pai tem `font-size: 16px`, um filho com `font-size: 2em;` terá `32px`. O problema é que `em` pode ter um efeito "composto", onde aninhar elementos com `em` pode aumentar ou diminuir o tamanho da fonte de forma inesperada.
+- **Exemplo:**
+  ```css
+  div { font-size: 20px; }
+  p { font-size: 1.5em; } /* Terá 30px (20px * 1.5) */
+  ```
+
+---
+
+#### 3. `rem` (Root EM)
+- **O que é:** Uma unidade relativa ao `font-size` do **elemento raiz** (`<html>`).
+- **Por que é útil:** `rem` evita o efeito "composto" do `em`. Não importa onde o elemento está na página, `rem` sempre será relativo ao tamanho da fonte da raiz. Isso torna o dimensionamento de fontes em todo o site muito mais previsível e controlável. É a unidade mais recomendada para criar layouts escaláveis e acessíveis.
+- **Exemplo:**
+  ```css
+  /* Supondo que o navegador tenha a fonte padrão de 16px na raiz (<html>) */
+  h1 { font-size: 2rem; }   /* Terá 32px (16px * 2) */
+  p { font-size: 1rem; }    /* Terá 16px (16px * 1) */
+  ```
+
+---
+
+#### 4. `%` (Porcentagem)
+- **O que é:** Similar ao `em`, é uma unidade relativa ao `font-size` do **elemento pai**.
+- **Como funciona:** `100%` é igual a `1em`. Assim como `em`, pode sofrer do efeito "composto".
+- **Exemplo:**
+  ```css
+  div { font-size: 20px; }
+  p { font-size: 80%; } /* Terá 16px (80% de 20px) */
+  ```
