@@ -48,20 +48,32 @@ button {
   background-image: url(/assets/background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: center; */
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 #presentation {
-  position: relative;
   /* width: 600px; */
   width: 37.5rem;
   /* top: calc(50% - 185px); */
-  top: calc(50% - 11.5625rem);
+}
+
+#qualities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+#qualities > img {
+  margin: 0 2.5rem;
 }
 
 .container {
   /* padding: 160px 120px; */
-  padding: 10rem 7.5rem;
+  padding: 5rem 7.5rem;
   text-align: center;
 }
 
@@ -78,8 +90,19 @@ button {
 .container > button {
   /* margin-top: 32px; */
   margin-top: 2rem;
+  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+}
+
+.container > button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 .background-gradient {
   background: linear-gradient(180deg, #fff, #d9d9d9);
+}
+
+.background-red {
+  background: #f84646;
+  color: #fff;
 }
