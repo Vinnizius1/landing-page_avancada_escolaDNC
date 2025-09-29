@@ -43,3 +43,15 @@ Neste exemplo, um gradiente vertical (`180deg`) vai do branco (`#fff`) para um c
   background: linear-gradient(180deg, #fff, #d9d9d9);
 }
 ```
+
+---
+
+## Imagens: Conteúdo (HTML) vs. Decoração (CSS)
+
+Uma decisão importante no desenvolvimento web é onde colocar as imagens. A regra geral é:
+
+- **HTML para conteúdo:** Imagens que são essenciais para a compreensão do conteúdo, como fotos de perfil, imagens de posts ou diagramas, devem estar no HTML usando a tag `<img>`. Isso ocorre porque elas têm **valor semântico**. Leitores de tela as descrevem para usuários com deficiência visual (usando o atributo `alt`), e os motores de busca as indexam.
+
+- **CSS para decoração:** Imagens que são puramente estéticas, como texturas de fundo ou ícones decorativos, devem ser aplicadas no CSS com a propriedade `background-image`. Elas não adicionam informação, apenas enfeitam a página. Mantê-las no CSS separa a apresentação do conteúdo, tornando o código mais limpo e fácil de manter. Se a imagem não carregar, o conteúdo principal não é afetado.
+
+Neste projeto, as fotos dos posts e do usuário estão no HTML, enquanto a imagem de fundo está no CSS, seguindo exatamente essa boa prática.
