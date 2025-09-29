@@ -106,3 +106,22 @@ button {
   background: #f84646;
   color: #fff;
 }
+
+.article-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start; /* Consertamos assim o tamanho 100% do botão, evitando "stretch" */
+  margin: 0 2.5rem 0 0;
+}
+
+.article-container {
+  display: flex;
+}
+
+.article-container:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.article-container:nth-child(even) > .article-details {
+  margin: 0 0 0 2.5rem;
+}
