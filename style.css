@@ -116,13 +116,45 @@ button {
     text-align: left;
     align-items: flex-start; /* Consertamos assim o tamanho 100% do botão, evitando "stretch" */
     margin: 0 2.5rem 0 0;
+
+    justify-content: space-between;
+
+    & > button {
+      font-size: 1rem;
+    }
   }
 
   &:nth-child(even) {
+    margin-top: 5rem;
     flex-direction: row-reverse;
 
     & > .article-details {
       margin: 0 0 0 2.5rem;
     }
   }
+}
+
+.footer-list {
+  display: flex;
+  text-align: left;
+
+  & > ul > li {
+    list-style: none;
+    margin-bottom: 1rem;
+  }
+  & > ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-list-title {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8rem;
 }
