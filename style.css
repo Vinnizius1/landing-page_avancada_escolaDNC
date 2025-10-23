@@ -26,6 +26,12 @@ h2 {
   margin: 0;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
 button {
   background: #f84646;
   color: #fff;
@@ -157,4 +163,20 @@ button {
   justify-content: space-between;
   align-items: center;
   margin-top: 8rem;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* 3 colunas de 1fr ou seja, cada coluna terá 1 item */
+  gap: 5rem;
+}
+
+/* Grid Item */
+.grid-item > h3,
+.grid-item > p {
+  margin: 0.5rem 0 0;
 }
