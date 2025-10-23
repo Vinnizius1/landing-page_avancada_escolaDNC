@@ -113,6 +113,10 @@ button {
   color: #fff;
 }
 
+.background-grey {
+  background: #f4f5f7;
+}
+
 .article-container {
   display: flex;
 
@@ -179,4 +183,53 @@ button {
 .grid-item > h3,
 .grid-item > p {
   margin: 0.5rem 0 0;
+}
+
+/* Grid Container Companies */
+.grid-container-companies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.grid-item-companies {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+/* OBSERVAÇÃO sobre adicionar classe única pra cada item (company-1, company-2...):
+cada item terá uma classe unica, assim ele pode ser selecionado individualmente via
+"grid-area" dizendo a posição da linha por coluna que ele se encontra.
+*/
+.company-1 {
+  grid-area: 3/1;
+}
+.company-2 {
+  grid-area: 2/2;
+}
+.company-3 {
+  grid-area: 3/2;
+}
+.company-4 {
+  grid-area: 1/3;
+}
+.company-5 {
+  grid-area: 2/3;
+}
+.company-6 {
+  grid-area: 3/3;
+}
+.company-7 {
+  grid-area: 2/4;
+}
+.company-8 {
+  grid-area: 3/4;
+}
+.company-9 {
+  grid-area: 3/5;
 }
