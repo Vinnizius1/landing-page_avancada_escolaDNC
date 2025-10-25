@@ -14,8 +14,8 @@ Este projeto serve como uma etapa de aprendizado guiado, preparando para o desaf
 
 ## 🔗 Links
 
-- **Figma Design:** `[COLE O LINK DO FIGMA AQUI]`
-- **Deploy (Netlify):** `[COLE O LINK DO NETLIFY AQUI]`
+- **Figma Design:** [Link para o Figma](https://www.figma.com/design/izr7zE54JP4AabUg2yvt5N/Projeto-responsivo---Responsividade-com-CSS?node-id=0-1&p=f&t=9RZ6JzViPgFk00nV-0)
+- **Deploy (Netlify):** [Deploy no Netlify](https://portfolio-responsivo-dnc.netlify.app/)
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -36,4 +36,4 @@ start index.html
 
 ---
 
-*Projeto desenvolvido como parte da trilha de aprendizado da Escola DNC.*
+_Projeto desenvolvido como parte da trilha de aprendizado da Escola DNC._
