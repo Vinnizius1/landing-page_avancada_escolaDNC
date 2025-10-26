@@ -32,6 +32,14 @@ h3 {
   margin: 0;
 }
 
+p {
+  /* Melhora a legibilidade com espaçamento de linha (line-height) e cor de texto mais suave. */
+  /* font-size: 24px; */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
 button {
   background: #f84646;
   color: #fff;
@@ -235,6 +243,12 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
 }
 
 /* Responsividade */
+@media only screen and (max-width: 1170px) {
+  .article-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
 /* Tablet */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   h1 {
@@ -247,6 +261,12 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
 
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-container {
+    > img {
+      width: 50%;
+    }
   }
 }
 
