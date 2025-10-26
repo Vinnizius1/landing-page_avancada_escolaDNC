@@ -241,8 +241,9 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
 .company-9 {
   grid-area: 3/5;
 }
-
+/*  */
 /* Responsividade */
+/*  */
 @media only screen and (max-width: 1170px) {
   .article-container h2 {
     font-size: 2.2rem;
@@ -273,6 +274,14 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
     grid-template-columns: repeat(3, 1fr);
   }
 
+  #presentation-container {
+    padding: 5rem 4rem;
+  }
+
+  .container {
+    padding: 5rem 4rem;
+  }
+
   /* Reseta a posição fixa dos itens para que sigam o fluxo do grid de 3 colunas */
   /* 
     O seletor [class*="company-"] é um "seletor de atributo".
@@ -293,6 +302,10 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
   h2 {
     font-size: 1.5rem;
   }
+
+  /* #presentation-container {
+    justify-content: center;
+  } */
 
   .grid-container {
     grid-template-columns: 1fr;
@@ -347,5 +360,25 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
   [class*="company-"] {
     grid-area: auto;
     height: 6rem;
+  }
+
+  /*
+    Isso vai:
+    - Mudar o display para block, empilhando os itens.
+    - Centralizar o conteúdo de texto e os ícones.
+    - Adicionar espaçamentos verticais para não ficar tudo colado.
+  */
+  .footer-list,
+  .footer-copyright {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-list > ul {
+    margin-bottom: 2.5rem; /* Espaço entre as listas de links */
+  }
+
+  .footer-copyright {
+    margin-top: 4rem; /* Espaço maior acima da linha de copyright */
   }
 }
