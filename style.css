@@ -268,6 +268,20 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
       width: 50%;
     }
   }
+
+  .grid-container-companies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Reseta a posição fixa dos itens para que sigam o fluxo do grid de 3 colunas */
+  /* 
+    O seletor [class*="company-"] é um "seletor de atributo".
+    Ele seleciona qualquer elemento cujo atributo 'class' CONTENHA a string "company-".
+    É uma forma eficiente de aplicar o mesmo estilo a .company-1, .company-2, etc., de uma só vez.
+  */
+  [class*="company-"] {
+    grid-area: auto;
+  }
 }
 
 /* Mobile */
@@ -318,5 +332,20 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
       order: -1;
       margin-bottom: 1.5rem;
     }
+  }
+
+  .grid-container-companies {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reseta a posição fixa dos itens para que sigam o fluxo do grid de 1 coluna */
+  /* 
+    O seletor [class*="company-"] é um "seletor de atributo".
+    Ele seleciona qualquer elemento cujo atributo 'class' CONTENHA a string "company-".
+    É uma forma eficiente de aplicar o mesmo estilo a .company-1, .company-2, etc., de uma só vez.
+  */
+  [class*="company-"] {
+    grid-area: auto;
+    height: 6rem;
   }
 }
