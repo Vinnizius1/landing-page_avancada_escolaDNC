@@ -371,7 +371,6 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
   .footer-list,
   .footer-copyright {
     display: block;
-    text-align: center;
   }
 
   .footer-list > ul {
@@ -380,5 +379,10 @@ cada item terá uma classe unica, assim ele pode ser selecionado individualmente
 
   .footer-copyright {
     margin-top: 4rem; /* Espaço maior acima da linha de copyright */
+    flex-direction: column-reverse;
+
+    > div:first-child {
+      margin-bottom: 2rem;
+    }
   }
 }
